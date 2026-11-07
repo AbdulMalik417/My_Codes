@@ -1,9 +1,8 @@
-/* =================================
+/* =========================
    AMITECH PROFESSIONAL WEBSITE
-   Main CSS Stylesheet
-================================= */
+========================= */
 
-/* 1. GENERAL SETTINGS */
+/* GENERAL SETTINGS */
 
 * {
     margin: 0;
@@ -16,337 +15,224 @@ html {
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7fb;
-    color: #222;
+    font-family: Arial, sans-serif;
+    background-color: #0B1220;
+    color: #FFFFFF;
     line-height: 1.6;
 }
 
-/* 2. HEADER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* HEADER */
 
 header {
-    background-color: #071b33;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+    background-color: #111C30;
+    padding: 20px 0;
+    border-bottom: 1px solid #26364D;
 }
 
-header h1 {
-    font-size: 42px;
-    letter-spacing: 4px;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header p {
-    color: #d4af37;
-    margin-top: 10px;
-    font-size: 16px;
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #06B6D4;
 }
 
-/* 3. NAVIGATION BAR */
+/* NAVIGATION */
 
 nav {
-    background-color: #102d4e;
-    padding: 18px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    display: flex;
+    gap: 25px;
 }
 
 nav a {
-    color: white;
+    color: #FFFFFF;
     text-decoration: none;
-    margin: 0 18px;
     font-weight: bold;
     transition: 0.3s;
 }
 
 nav a:hover {
-    color: #d4af37;
+    color: #06B6D4;
 }
 
-/* 4. HOME SECTION */
+/* HERO SECTION */
 
 #home {
-    background-color: #e8eef5;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 90px 20px;
+    padding: 80px 20px;
+    background: linear-gradient(
+        135deg,
+        #0B1220,
+        #142B4A
+    );
 }
 
-#home h2 {
-    font-size: 38px;
-    color: #071b33;
+#home h1 {
+    font-size: 48px;
     margin-bottom: 15px;
 }
 
 #home p {
     font-size: 18px;
-    margin-bottom: 20px;
-}
-
-/* 5. BUTTONS */
-
-button {
-    background-color: #d4af37;
-    color: #071b33;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #071b33;
-    color: white;
-}
-
-/* 6. GENERAL SECTIONS */
-
-section {
-    padding: 65px 8%;
-}
-
-section h2 {
-    color: #071b33;
-    font-size: 30px;
+    color: #CBD5E1;
+    max-width: 700px;
     margin-bottom: 25px;
 }
 
-/* 7. ABOUT SECTION */
+/* BUTTONS */
+
+button,
+.btn {
+    display: inline-block;
+    background-color: #2563EB;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+button:hover,
+.btn:hover {
+    background-color: #06B6D4;
+    transform: translateY(-2px);
+}
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 80px 20px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #06B6D4;
+}
+
+/* ABOUT SECTION */
 
 #about {
-    background-color: white;
+    background-color: #111C30;
+    text-align: center;
 }
 
 #about p {
-    font-size: 17px;
+    max-width: 800px;
+    margin: auto;
+    color: #CBD5E1;
 }
 
-/* 8. SERVICES SECTION */
+/* SERVICES SECTION */
 
 #services {
+    background-color: #0B1220;
+}
+
+.service-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    background-color: #f4f7fb;
-}
-
-#services h2 {
-    grid-column: 1 / -1;
 }
 
 .service-card {
-    background-color: white;
+    background-color: #111C30;
     padding: 30px;
+    border: 1px solid #26364D;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: 0.3s;
 }
 
 .service-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-color: #06B6D4;
 }
 
 .service-card h3 {
-    color: #0b5793;
+    color: #06B6D4;
     margin-bottom: 12px;
-    font-size: 21px;
 }
 
-/* 9. CONTACT SECTION */
+.service-card p {
+    color: #CBD5E1;
+}
+
+/* CONTACT SECTION */
 
 #contact {
-    background-color: white;
+    background-color: #111C30;
+    text-align: center;
 }
 
 #contact p {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    color: #CBD5E1;
 }
 
-/* 10. FOOTER */
+/* FOOTER */
 
 footer {
-    background-color: #071b33;
-    color: white;
+    background-color: #080E19;
     text-align: center;
     padding: 25px;
+    color: #CBD5E1;
 }
 
-/* 11. MOBILE RESPONSIVENESS */
+/* RESPONSIVE DESIGN */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
-    header h1 {
-        font-size: 30px;
-    }
-
-    #home h2 {
-        font-size: 27px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px;
-    }
-
-    #services {
-        grid-template-columns: 1fr;
-    }
-
-    section {
-        padding: 40px 6%;
-    }
-}
-
-/* 12. SMALL MOBILE SCREENS */
-
-@media screen and (max-width: 480px) {
-
-    header {
-        padding: 25px 10px;
-    }
-
-    header h1 {
-        font-size: 25px;
+    header .container {
+        flex-direction: column;
+        gap: 15px;
     }
 
     nav {
-        padding: 12px 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 
-    nav a {
-        font-size: 13px;
-        margin: 5px;
+    #home h1 {
+        font-size: 34px;
     }
 
-    #home {
-        padding: 55px 15px;
-    }
-
-    #home h2 {
-        font-size: 24px;
-    }
-
-    section h2 {
-        font-size: 24px;
-    }
-
-    .service-card {
-        padding: 20px;
-    }
-}
-/* ==================================
-   AMITECH RESPONSIVE DESIGN
-================================== */
-
-/* TABLETS AND SMALL LAPTOPS */
-
-@media screen and (max-width: 1024px) {
-
-    header h1 {
-        font-size: 35px;
-    }
-
-    section {
-        padding: 50px 5%;
-    }
-
-    #services {
+    .service-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-
 }
 
+@media (max-width: 500px) {
 
-/* MOBILE PHONES */
-
-@media screen and (max-width: 768px) {
-
-    header {
-        padding: 25px 15px;
+    #home h1 {
+        font-size: 28px;
     }
 
-    header h1 {
-        font-size: 30px;
-    }
-
-    header p {
-        font-size: 14px;
-    }
-
-    nav {
-        padding: 12px 5px;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 6px;
-        font-size: 14px;
-    }
-
-    #home {
-        padding: 60px 20px;
-    }
-
-    #home h2 {
-        font-size: 27px;
-    }
-
-    #home p {
-        font-size: 15px;
-    }
-
-    #services {
+    .service-grid {
         grid-template-columns: 1fr;
     }
 
     section {
-        padding: 40px 20px;
+        padding: 55px 15px;
     }
-
-    section h2 {
-        font-size: 25px;
-    }
-
-    .service-card {
-        padding: 22px;
-    }
-
-}
-
-
-/* SMALL MOBILE PHONES */
-
-@media screen and (max-width: 480px) {
-
-    header h1 {
-        font-size: 25px;
-    }
-
-    nav a {
-        font-size: 12px;
-        margin: 4px;
-    }
-
-    #home h2 {
-        font-size: 23px;
-    }
-
-    button {
-        width: 100%;
-        padding: 14px;
-    }
-
-    .service-card h3 {
-        font-size: 19px;
-    }
-
-    footer {
-        font-size: 13px;
-    }
-
 }
