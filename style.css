@@ -236,3 +236,99 @@ footer {
         padding: 55px 15px;
     }
 }
+/* PROFESSIONAL AMITECH HOMEPAGE */
+
+#home {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.hero-tag {
+    color: #06B6D4;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 span {
+    color: #06B6D4;
+}
+
+.hero-content h2 {
+    color: #CBD5E1;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.hero-tag) {
+    color: #CBD5E1;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 1px solid #06B6D4;
+}
+
+.secondary-btn:hover {
+    background-color: #06B6D4;
+}
+
+@media (max-width: 600px) {
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-content h2 {
+        font-size: 20px;
+    }
+
+    .hero-content > p:not(.hero-tag) {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+}
+/* WHY CHOOSE US */
+
+#why-us {
+    background-color: #111C30;
+}
+
+#why-us .service-card {
+    text-align: center;
+}
+
+#why-us .service-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
