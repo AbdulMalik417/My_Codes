@@ -1,0 +1,352 @@
+/* =================================
+   AMITECH PROFESSIONAL WEBSITE
+   Main CSS Stylesheet
+================================= */
+
+/* 1. GENERAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* 2. HEADER */
+
+header {
+    background-color: #071b33;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+    letter-spacing: 4px;
+}
+
+header p {
+    color: #d4af37;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* 3. NAVIGATION BAR */
+
+nav {
+    background-color: #102d4e;
+    padding: 18px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+/* 4. HOME SECTION */
+
+#home {
+    background-color: #e8eef5;
+    text-align: center;
+    padding: 90px 20px;
+}
+
+#home h2 {
+    font-size: 38px;
+    color: #071b33;
+    margin-bottom: 15px;
+}
+
+#home p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* 5. BUTTONS */
+
+button {
+    background-color: #d4af37;
+    color: #071b33;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #071b33;
+    color: white;
+}
+
+/* 6. GENERAL SECTIONS */
+
+section {
+    padding: 65px 8%;
+}
+
+section h2 {
+    color: #071b33;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* 7. ABOUT SECTION */
+
+#about {
+    background-color: white;
+}
+
+#about p {
+    font-size: 17px;
+}
+
+/* 8. SERVICES SECTION */
+
+#services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    background-color: #f4f7fb;
+}
+
+#services h2 {
+    grid-column: 1 / -1;
+}
+
+.service-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+    color: #0b5793;
+    margin-bottom: 12px;
+    font-size: 21px;
+}
+
+/* 9. CONTACT SECTION */
+
+#contact {
+    background-color: white;
+}
+
+#contact p {
+    margin-bottom: 10px;
+}
+
+/* 10. FOOTER */
+
+footer {
+    background-color: #071b33;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* 11. MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 768px) {
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    #home h2 {
+        font-size: 27px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    #services {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+}
+
+/* 12. SMALL MOBILE SCREENS */
+
+@media screen and (max-width: 480px) {
+
+    header {
+        padding: 25px 10px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav {
+        padding: 12px 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    #home {
+        padding: 55px 15px;
+    }
+
+    #home h2 {
+        font-size: 24px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .service-card {
+        padding: 20px;
+    }
+}
+/* ==================================
+   AMITECH RESPONSIVE DESIGN
+================================== */
+
+/* TABLETS AND SMALL LAPTOPS */
+
+@media screen and (max-width: 1024px) {
+
+    header h1 {
+        font-size: 35px;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    #services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* MOBILE PHONES */
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        padding: 12px 5px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+        font-size: 14px;
+    }
+
+    #home {
+        padding: 60px 20px;
+    }
+
+    #home h2 {
+        font-size: 27px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+
+    #services {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    section h2 {
+        font-size: 25px;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* SMALL MOBILE PHONES */
+
+@media screen and (max-width: 480px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    nav a {
+        font-size: 12px;
+        margin: 4px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+    button {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+    footer {
+        font-size: 13px;
+    }
+
+}
