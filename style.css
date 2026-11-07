@@ -332,3 +332,58 @@ footer {
     font-size: 21px;
     margin-bottom: 15px;
 }
+/* MULTI-PAGE WEBSITE STYLING */
+
+.page-banner {
+    background: linear-gradient(135deg, #0B1220, #142B4A);
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.page-banner h1 {
+    font-size: 42px;
+    color: #06B6D4;
+    margin-bottom: 15px;
+}
+
+.page-banner p {
+    color: #CBD5E1;
+    font-size: 18px;
+}
+
+.page-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 0;
+}
+
+.page-content h2 {
+    color: #06B6D4;
+    margin-bottom: 20px;
+    margin-top: 25px;
+}
+
+.page-content p {
+    color: #CBD5E1;
+    margin-bottom: 18px;
+}
+
+.project-note {
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .page-banner h1 {
+        font-size: 30px;
+    }
+
+    .page-banner p {
+        font-size: 15px;
+    }
+
+    .page-content {
+        padding: 45px 0;
+    }
+}
