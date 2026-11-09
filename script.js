@@ -160,3 +160,50 @@ function calculateSolarQuotation() {
 }
 
 calculateSolarQuotation();
+
+// Select HTML elements
+const welcomeTitle = document.getElementById("welcomeTitle");
+const welcomeText = document.getElementById("welcomeText");
+const changeMessage = document.getElementById("changeMessage");
+
+// Respond when the button is clicked
+if (changeMessage && welcomeTitle && welcomeText) {
+
+    changeMessage.addEventListener("click", function() {
+
+        welcomeTitle.textContent = "Welcome to the Future of Technology!";
+
+        welcomeText.textContent =
+            "ALVIONEX provides Solar, CCTV, Embedded Systems, Web Development and AI Solutions.";
+
+        changeMessage.textContent = "Thank You for Exploring";
+
+    });
+
+}
+function showService(service) {
+
+    const description = document.getElementById("serviceDescription");
+
+    if (!description) return;
+
+    if (service === "solar") {
+
+        description.textContent =
+            "AMITECH provides solar installation, inverter setup, battery backup and maintenance services.";
+
+    } else if (service === "cctv") {
+
+        description.textContent =
+            "AMITECH provides CCTV installation, security camera setup and surveillance solutions.";
+
+    } else if (service === "web") {
+
+        description.textContent =
+            "AMITECH develops professional websites and digital solutions for businesses.";
+
+    } else if (service === "Embedded") {
+
+        description.textContent =
+            "AMITECH develops Arduino-based systems, smart automation solutions and IoT applications.";
+    }}

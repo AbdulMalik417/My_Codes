@@ -464,3 +464,65 @@ footer {
     margin-top: 15px;
     text-align: center;
 }
+.interactive-box {
+    margin: 30px auto;
+    padding: 25px;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 12px;
+    background: #f1f5f9;
+}
+
+.interactive-box h2 {
+    color: #0b1f3a;
+    margin-bottom: 15px;
+}
+
+.interactive-box p {
+    margin-bottom: 20px;
+}
+
+.interactive-box button {
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.interactive-box button:hover {
+    background: #0056b3;
+}
+.service-interaction {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 30px auto;
+    background: #f1f5f9;
+    border-radius: 12px;
+}
+
+.service-interaction h2 {
+    color: #0b1f3a;
+    margin-bottom: 15px;
+}
+
+.service-interaction p {
+    margin: 20px auto;
+    max-width: 600px;
+    line-height: 1.7;
+}
+
+.service-interaction button {
+    margin: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.service-interaction button:hover {
+    background: #0056b3;
+}
