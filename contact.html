@@ -17,13 +17,19 @@
 
             <div class="logo">AMITECH</div>
 
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <button class="menu-toggle" id="menuToggle"
+    aria-label="Open navigation menu"
+    aria-expanded="false">
+    ☰
+</button>
+
+<nav id="mainNav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+</nav>
 
         </div>
     </header>
@@ -51,12 +57,57 @@
             Chat with Us on WhatsApp
         </a>
 
+        <form id="contactForm" class="contact-form">
+
+    <h2>Send Us an Enquiry</h2>
+
+    <label for="customerName">Full Name</label>
+    <input
+        type="text"
+        id="customerName"
+        placeholder="Enter your full name"
+        required>
+
+    <label for="customerEmail">Email Address</label>
+    <input
+        type="email"
+        id="customerEmail"
+        placeholder="Enter your email"
+        required>
+
+    <label for="customerService">Select a Service</label>
+
+    <select id="customerService" required>
+        <option value="">Choose a service</option>
+        <option value="Solar Installation">Solar Installation</option>
+        <option value="CCTV Installation">CCTV Installation</option>
+        <option value="Embedded Systems">Embedded Systems</option>
+        <option value="IoT and Automation">IoT and Automation</option>
+        <option value="Web Development">Web Development</option>
+        <option value="AI Solutions">AI Solutions</option>
+    </select>
+
+    <label for="customerMessage">Your Message</label>
+
+    <textarea
+        id="customerMessage"
+        rows="5"
+        placeholder="Describe what you need"
+        required></textarea>
+
+    <button type="submit">Send Enquiry</button>
+
+    <p id="formMessage" aria-live="polite"></p>
+
+</form>
+
     </section>
 
     <footer>
         <p>&copy; 2026 AMITECH. All Rights Reserved.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 
 </html>
