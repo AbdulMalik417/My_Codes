@@ -87,4 +87,76 @@ if (contactForm) {
 
     });
 
+
+// ALVIONET TECH COMPANY INFORMATION
+
+let companyName = "ALVIONET TECH";
+
+let companyEmail = "alvionet12@gmail.com";
+
+let companyPhone = "07062254511";
+
+let companyLocation = "Nigeria";
+
+console.log(companyName);
+
+console.log(companyEmail);
+
+console.log(companyPhone);
+
+console.log(companyLocation);
+
+let projectCost = 800000;
+
+if (projectCost >= 1000000) {
+
+    console.log("Premium customer");
+
+} else if (projectCost >= 500000) {
+
+    console.log("Standard customer");
+
+} else {
+
+    console.log("Basic customer");
+
 }
+
+}
+// AMITECH SOLAR QUOTATION CALCULATOR
+
+function calculateSolarQuotation() {
+
+    const panelCost = 350000;
+
+    const inverterCost = 300000;
+
+    const batteryCost = 450000;
+
+    const installationCost = 100000;
+
+    const totalCost =
+        panelCost +
+        inverterCost +
+        batteryCost +
+        installationCost;
+
+    console.log("ALVIONET SOLAR QUOTATION");
+
+    console.log("----------------------");
+
+    console.log("Solar Panels: ₦" + panelCost);
+
+    console.log("Inverter: ₦" + inverterCost);
+
+    console.log("Battery: ₦" + batteryCost);
+
+    console.log("Installation: ₦" + installationCost);
+
+    console.log("----------------------");
+
+    console.log("TOTAL: ₦" + totalCost);
+
+}
+
+calculateSolarQuotation();
