@@ -57,47 +57,65 @@
             Chat with Us on WhatsApp
         </a>
 
-        <form id="contactForm" class="contact-form">
+        <form id="contactForm">
 
-    <h2>Send Us an Enquiry</h2>
+    <div class="form-group">
+        <label for="customerName">Full Name</label>
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Enter your full name"
+            required
+        >
+    </div>
 
-    <label for="customerName">Full Name</label>
-    <input
-        type="text"
-        id="customerName"
-        placeholder="Enter your full name"
-        required>
+    <div class="form-group">
+        <label for="customerEmail">Email Address</label>
+        <input
+            type="email"
+            id="customerEmail"
+            placeholder="Enter your email"
+            required
+        >
+    </div>
 
-    <label for="customerEmail">Email Address</label>
-    <input
-        type="email"
-        id="customerEmail"
-        placeholder="Enter your email"
-        required>
+    <div class="form-group">
+        <label for="customerPhone">Phone Number</label>
+        <input
+            type="tel"
+            id="customerPhone"
+            placeholder="Enter your phone number"
+            required
+        >
+    </div>
 
-    <label for="customerService">Select a Service</label>
+    <div class="form-group">
+        <label for="customerService">Select a Service</label>
 
-    <select id="customerService" required>
-        <option value="">Choose a service</option>
-        <option value="Solar Installation">Solar Installation</option>
-        <option value="CCTV Installation">CCTV Installation</option>
-        <option value="Embedded Systems">Embedded Systems</option>
-        <option value="IoT and Automation">IoT and Automation</option>
-        <option value="Web Development">Web Development</option>
-        <option value="AI Solutions">AI Solutions</option>
-    </select>
+        <select id="customerService" required>
+            <option value="">Choose a service</option>
+            <option value="Solar Installation">Solar Installation</option>
+            <option value="CCTV Installation">CCTV Installation</option>
+            <option value="Arduino and Embedded Systems">Arduino and Embedded Systems</option>
+            <option value="Web Development">Web Development</option>
+            <option value="AI Solutions">AI Solutions</option>
+        </select>
+    </div>
 
-    <label for="customerMessage">Your Message</label>
+    <div class="form-group">
+        <label for="customerMessage">Your Message</label>
 
-    <textarea
-        id="customerMessage"
-        rows="5"
-        placeholder="Describe what you need"
-        required></textarea>
+        <textarea
+            id="customerMessage"
+            rows="5"
+            placeholder="Tell us how we can help"
+            required
+        ></textarea>
+    </div>
 
-    <button type="submit">Send Enquiry</button>
+    <button type="submit">Submit Enquiry</button>
 
-    <p id="formMessage" aria-live="polite"></p>
+    <p id="formMessage"></p>
 
 </form>
 

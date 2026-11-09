@@ -29,7 +29,7 @@ function exploreServices() {
 
 function contactMessage() {
 
-    alert("Thank you for your interest in AMITECH. Contact us to get started!");
+    alert("Thank you for contacting AMITECH. We appreciate your interest in our services.");
 
 }
 // MOBILE NAVIGATION
@@ -52,13 +52,13 @@ if (menuToggle && mainNav) {
     });
 
 }
-// CONTACT FORM VALIDATION
+/// ALVIONET Contact Form Validation
 
 const contactForm = document.getElementById("contactForm");
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function (event) {
+    contactForm.addEventListener("submit", function(event) {
 
         event.preventDefault();
 
@@ -66,26 +66,58 @@ if (contactForm) {
 
         const email = document.getElementById("customerEmail").value.trim();
 
+        const phone = document.getElementById("customerPhone").value.trim();
+
         const service = document.getElementById("customerService").value;
 
         const message = document.getElementById("customerMessage").value.trim();
 
         const formMessage = document.getElementById("formMessage");
 
-        if (!name || !email || !service || !message) {
+        // Check empty fields
+        if (!name || !email || !phone || !service || !message) {
 
             formMessage.textContent = "Please complete all fields.";
 
-            return;
+            formMessage.style.color = "red";
 
+            return;
         }
 
-        formMessage.textContent =
-            "Thank you, " + name + "! Your enquiry has been checked.";
+        // Check email format
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+        if (!emailPattern.test(email)) {
+
+            formMessage.textContent = "Please enter a valid email address.";
+
+            formMessage.style.color = "red";
+
+            return;
+        }
+
+        // Check phone number length
+        if (phone.length < 7) {
+
+            formMessage.textContent = "Please enter a valid phone number.";
+
+            formMessage.style.color = "red";
+
+            return;
+        }
+
+        // Display success message
+        formMessage.textContent =
+            "Thank you, " + name + "! Your enquiry has been validated successfully.";
+
+        formMessage.style.color = "green";
+
+        // Clear form
         contactForm.reset();
 
     });
+
+}
 
 
 // ALVIONET TECH COMPANY INFORMATION
@@ -122,7 +154,7 @@ if (projectCost >= 1000000) {
 
 }
 
-}
+
 // AMITECH SOLAR QUOTATION CALCULATOR
 
 function calculateSolarQuotation() {
@@ -206,4 +238,11 @@ function showService(service) {
 
         description.textContent =
             "AMITECH develops Arduino-based systems, smart automation solutions and IoT applications.";
-    }}
+    }
+
+    else if (service === "AI") {
+
+        description.textContent =
+            "AMITECH develops Intelligent automation for businesses.";
+    }
+}
