@@ -246,3 +246,248 @@ function showService(service) {
             "AMITECH develops Intelligent automation for businesses.";
     }
 }
+// AMITECH Dynamic Service Catalogue
+
+const amitechServiceList = [
+
+    {
+        name: "Solar Installation",
+        description: "Solar panels, inverter installation and battery backup.",
+        price:"Requests a quotation"
+
+    },
+    
+    {
+        name: "CCTV Installation",
+        description: "Professional security camera and surveillance solutions."
+    },
+
+    {
+        name: "Embedded Systems",
+        description: "Arduino projects, microcontrollers and smart automation."
+    },
+
+    {
+        name: "Web Development",
+        description: "Professional websites for businesses and organisations."
+    },
+
+    {
+        name: "AI Solutions",
+        description: "AI-powered applications and business automation."
+    }
+
+];
+
+
+// Find the HTML container
+const serviceCatalog = document.getElementById("serviceCatalog");
+
+// Display services
+if (serviceCatalog) {
+
+    amitechServiceList.forEach(function(service) {
+
+        const serviceCard = document.createElement("div");
+
+        serviceCard.className = "dynamic-service-card";
+
+        serviceCard.innerHTML = `
+            <h3>${service.name}</h3>
+            <p>${service.description}</p>
+        `;
+
+        serviceCatalog.appendChild(serviceCard);
+
+    });
+
+}
+
+// AMITECH Customer Dashboard
+
+const dashboardCustomers = [
+
+    {
+        name: "Malik",
+        service: "Solar Installation",
+        location: "Ogbomoso"
+    },
+
+    {
+        name: "John",
+        service: "CCTV Installation",
+        location: "Ibadan"
+    },
+
+    {
+        name: "David",
+        service: "Web Development",
+        location: "Lagos"
+    },
+
+    {
+        name: "Peter",
+        service: "Arduino Projects",
+        location: "Ogbomoso"
+    },
+
+    {
+        name: "James",
+        service: "AI Solutions",
+        location: "Ibadan"
+    }
+
+];
+
+const customerList = document.getElementById("customerList");
+
+const customerSearch = document.getElementById("customerSearch");
+
+// Display customers
+function displayCustomers(customerData) {
+
+    if (!customerList) return;
+
+    customerList.innerHTML = "";
+
+    customerData.forEach(customer => {
+
+        const card = document.createElement("div");
+
+        card.className = "customer-card";
+
+        const name = document.createElement("h3");
+        name.textContent = customer.name;
+
+        const service = document.createElement("p");
+        service.textContent = "Service: " + customer.service;
+
+        const location = document.createElement("p");
+        location.textContent = "Location: " + customer.location;
+
+        card.append(name, service, location);
+
+        customerList.appendChild(card);
+
+    });
+
+}
+
+// Search customers
+if (customerSearch && customerList) {
+
+    displayCustomers(dashboardCustomers);
+
+    customerSearch.addEventListener("input", () => {
+
+        const searchValue = customerSearch.value.toLowerCase();
+
+        const filteredCustomers = dashboardCustomers.filter(customer => {
+
+            return customer.name.toLowerCase().includes(searchValue);
+
+        });
+
+        displayCustomers(filteredCustomers);
+
+    });
+
+}
+const chatForm = document.getElementById("chatForm");
+
+const userInput = document.getElementById("userInput");
+
+const chatBody = document.getElementById("chatBody");
+
+// DISPLAY MESSAGES
+
+function displayMessage(message, sender) {
+
+    const messageElement = document.createElement("div");
+
+    messageElement.classList.add("message");
+
+    messageElement.classList.add(sender + "-message");
+
+    messageElement.textContent = message;
+
+    chatBody.appendChild(messageElement);
+
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+}
+
+// GENERATE RESPONSES
+
+function getBotResponse(message) {
+
+    const text = message.toLowerCase();
+
+    if (text.includes("hello") ||
+        text.includes("hi")) {
+
+        return "Hello! Welcome to ALVIONET. How can I assist you?";
+
+    }
+
+    if (text.includes("solar")) {
+
+        return "ALVIONET provides solar and inverter installation, battery backup and maintenance services.";
+
+    }
+
+    if (text.includes("cctv")) {
+
+        return "We provide CCTV installation and security monitoring solutions.";
+
+    }
+
+    if (text.includes("arduino") ||
+        text.includes("embedded")) {
+
+        return "We work on Arduino projects, embedded systems, IoT and automation solutions.";
+
+    }
+
+    if (text.includes("contact")) {
+
+        return "You can contact ALVIONET TECH through our official business contact channels.";
+
+    }
+
+    if (text.includes("price") ||
+        text.includes("cost")) {
+
+        return "Our prices depend on your requirements. Please tell us more about the service you need.";
+
+    }
+
+    return "Thank you for contacting ALVIONET. Could you explain your request in more detail?";
+
+}
+
+// HANDLE USER MESSAGES
+
+chatForm.addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const message = userInput.value.trim();
+
+    if (message === "") {
+        return;
+    }
+
+    displayMessage(message, "user");
+
+    userInput.value = "";
+
+    const response = getBotResponse(message);
+
+    setTimeout(function() {
+
+        displayMessage(response, "bot");
+
+    }, 500);
+
+});
